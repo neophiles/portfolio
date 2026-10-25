@@ -10,11 +10,11 @@ export default function Sidebar() {
   const { isOpen } = useSidebar()
   const navigate = useNavigate()
 
-  const sidebarWidth = isOpen ? "w-60" : "w-0 md:w-16"
+  const sidebarWidth = isOpen ? "w-xs" : "w-0 md:w-16"
 
   return (
     <aside className={cn(
-      "absolute md:sticky left-0 top-14 h-[calc(100vh-3.5rem)] bg-base-200 overflow-hidden md:overflow-visible transition-[width] ease-in-out duration-200",
+      "z-10 absolute md:sticky left-0 top-14 h-[calc(100vh-3.5rem)] bg-base-300 overflow-hidden md:overflow-visible transition-[width] ease-in-out duration-200",
       sidebarWidth
     )}>
       <div className="p-4 flex flex-col bg-inherit overflow-hidden">

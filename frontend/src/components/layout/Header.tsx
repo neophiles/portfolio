@@ -12,13 +12,13 @@ export default function Header() {
   const navigate = useNavigate()
 
   return (
-    <header className="sticky t-0 w-full h-14 p-4 flex items-center justify-center bg-base-200">
+    <header className="sticky t-0 w-full h-14 p-4 flex items-center justify-center bg-base-100">
       <div className="w-full flex items-center gap-2 bg-inherit">
         <Button className="p-1 bg-inherit rounded-lg" onClick={toggleOpen}>
           <Menu />
         </Button>
         <Button className="p-1 bg-inherit rounded-lg" onClick={() => navigate("/home")}>
-          <Text as="h1">Portfolio</Text>
+          <Text as="h1">neophiles</Text>
         </Button>
         <div className="flex-1" />
         <Button
