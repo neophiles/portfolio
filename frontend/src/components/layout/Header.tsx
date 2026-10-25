@@ -12,7 +12,7 @@ export default function Header() {
   const navigate = useNavigate()
 
   return (
-    <header className="sticky t-0 w-full h-14 p-4 flex items-center justify-center bg-base-100">
+    <header className="z-20 sticky top-0 w-full h-14 p-4 flex items-center justify-center bg-base-100">
       <div className="w-full flex items-center gap-2 bg-inherit">
         <Button className="p-1 bg-inherit rounded-lg" onClick={toggleOpen}>
           <Menu />
