@@ -14,7 +14,7 @@ export default function Sidebar() {
 
   return (
     <aside className={cn(
-      "absolute md:sticky left-0 top-14 h-[calc(100vh-3.5rem)] bg-base-300 overflow-hidden md:overflow-visible transition-[width] ease-in-out duration-200",
+      "z-10 absolute md:sticky left-0 top-14 h-[calc(100vh-3.5rem)] bg-base-300 overflow-hidden md:overflow-visible transition-[width] ease-in-out duration-200",
       sidebarWidth
     )}>
       <div className="p-4 flex flex-col bg-inherit overflow-hidden">
