@@ -6,6 +6,7 @@ export default function Main() {
       <div className="w-full flex justify-center">
         <Outlet />
       </div>
+      <div className="h-100"/>
     </main>
   )
 }
