@@ -17,7 +17,7 @@ export default function HeroSection() {
   const { isDark } = useTheme()
   
   return (
-    <section className="flex flex-col md:flex-row gap-12">
+    <section className="flex flex-col md:flex-row gap-8 md:gap-12">
       <div className="flex-none flex flex-col items-center gap-4">
         <div className="relative">
           <img
