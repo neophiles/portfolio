@@ -1,4 +1,4 @@
-import { PROJECTS } from "../../../../data/project";
+import { PROJECTS } from "../../../../data/projects";
 import FeaturedProjectCard from "./FeaturedProjectCard";
 
 export default function FeaturedProjectsContainer() {

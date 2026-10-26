@@ -2,7 +2,7 @@ import Card from "../../../common/Card";
 import Text from "../../../common/Text";
 import ToolIcon from "../tools/ToolIcon";
 import { TOOLS } from "../../../../data/tools";
-import type { Project } from "../../../../data/project";
+import type { Project } from "../../../../data/projects";
 import githubIconDark from "../../../../assets/contacts/github-icon-dark.png"
 import githubIconLight from "../../../../assets/contacts/github-icon-light.png"
 

@@ -1,4 +1,4 @@
-import HeroSection from "./HeroSection";
+import HeroSection from "./hero/HeroSection";
 import FeaturedProjectsSection from "./featured-projects/FeaturedProjectsSection";
 import ToolsSection from "./tools/ToolsSection";
 
