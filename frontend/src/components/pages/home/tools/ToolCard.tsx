@@ -14,8 +14,8 @@ export default function ToolCard({
   } = tool
 
   return (
-    <Card className="flex-1 aspect-square lg:flex-none lg:w-22 p-1 flex flex-col items-center justify-center gap-1 bg-base-100/50 shadow">
-      <ToolIcon imgSrc={imgSrc} className="size-8" />
+    <Card className="group flex-1 aspect-square lg:flex-none lg:w-22 p-1 flex flex-col items-center justify-center gap-1 bg-base-100/50 shadow">
+      <ToolIcon imgSrc={imgSrc} className="size-8 group-hover:scale-125 transition-transform duration-200" />
       <Text size="sm" className="hidden md:block text-base-content-muted">
         {name}
       </Text>
