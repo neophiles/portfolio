@@ -12,7 +12,7 @@ export default function ToolsContainer({
 
   return (
     <div className="grid grid-cols-4 md:grid-cols-6 lg:flex lg:flex-wrap gap-2">
-      {toolsDisplay.map((tool, index) => (
+      {toolsDisplay.filter((tool) => tool.display).map((tool, index) => (
         <ToolCard key={index} tool={tool} />
       ))}
     </div>
