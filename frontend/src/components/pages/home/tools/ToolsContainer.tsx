@@ -1,6 +1,5 @@
 import ToolCard from "./ToolCard";
-import { TOOLS, type ToolGroup } from "./tools";
-
+import { TOOLS, type ToolGroup } from "../../../../data/tools";
 
 export default function ToolsContainer({
   filter,
@@ -12,7 +11,7 @@ export default function ToolsContainer({
     : TOOLS
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="grid grid-cols-4 md:grid-cols-6 lg:flex lg:flex-wrap gap-2">
       {toolsDisplay.map((tool, index) => (
         <ToolCard key={index} tool={tool} />
       ))}
