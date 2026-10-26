@@ -18,7 +18,7 @@ export default function Header() {
           <Menu />
         </Button>
         <Button className="p-1 bg-inherit rounded-lg" onClick={() => navigate("/home")}>
-          <Text as="h1">neophiles</Text>
+          <Text as="h1">neophiles portfolio</Text>
         </Button>
         <div className="flex-1" />
         <Button
