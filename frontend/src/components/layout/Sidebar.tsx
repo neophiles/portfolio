@@ -1,16 +1,17 @@
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import useSidebar from "../../stores/sidebar";
 import Text from "../common/Text";
 import Button from "../common/Button";
-import { Certificate, Folder, Home, Rocket } from "lucide-react";
 import Icon from "../common/Icon";
 import { cn } from "cn";
 import useScreenWidth from "../../hooks/useScreenWidth";
+import { PAGES } from "../../data/pages";
 
 export default function Sidebar() {
   const { isOpen, toggleOpen } = useSidebar()
   const { screenWidth } = useScreenWidth()
   const navigate = useNavigate()
+  const location = useLocation()
 
   const handleNavigate = (
     path: string,
@@ -29,34 +30,19 @@ export default function Sidebar() {
     )}>
       <div className="p-4 flex flex-col bg-inherit overflow-hidden">
         <nav className="flex flex-col gap-2 bg-inherit">
-          <Button
-            className="p-1 flex items-center gap-4 bg-inherit rounded-lg"
-            onClick={() => handleNavigate("/home")}
-          >
-            <Icon icon={Home} />
-            <Text size="sm">Home</Text>
-          </Button>
-          <Button
-            className="p-1 flex items-center gap-4 bg-inherit rounded-lg"
-            onClick={() => handleNavigate("/projects")}
-          >
-            <Icon icon={Folder} />
-            <Text size="sm">Projects</Text>
-          </Button>
-          <Button
-            className="p-1 flex items-center gap-4 bg-inherit rounded-lg"
-            onClick={() => handleNavigate("/certificates")}
-          >
-            <Icon icon={Certificate} />
-            <Text size="sm">Certificates</Text>
-          </Button>
-          <Button
-            className="p-1 flex items-center gap-4 bg-inherit rounded-lg"
-            onClick={() => handleNavigate("/more")}
-          >
-            <Icon icon={Rocket} />
-            <Text size="sm" className="text-nowrap">More</Text>
-          </Button>
+          {PAGES.map(({ name, path, icon }, index) => (
+            <Button
+              key={index}
+              className={cn(
+                "p-1 flex items-center gap-4 rounded-lg",
+                location.pathname == path ? "brightness-90 bg-primary/10 text-primary" : "bg-inherit"
+              )}
+              onClick={() => handleNavigate(path)}
+            >
+              <Icon icon={icon} />
+              <Text size="sm" className="font-medium">{name}</Text>
+            </Button>
+          ))}
         </nav>
       </div>
     </aside>
