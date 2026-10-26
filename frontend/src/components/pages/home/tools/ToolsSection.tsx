@@ -3,7 +3,7 @@ import Button from "../../../common/Button";
 import Text from "../../../common/Text";
 import ToolsContainer from "./ToolsContainer";
 import { useState } from "react";
-import { TOOL_GROUPS, type ToolGroup } from "./tools";
+import { TOOL_GROUPS, type ToolGroup } from "../../../../data/tools";
 
 export default function ToolsSection() {
   const [filter, setFilter] = useState<ToolGroup | "All">("All")

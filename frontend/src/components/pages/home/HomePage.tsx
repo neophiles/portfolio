@@ -1,4 +1,5 @@
 import HeroSection from "./HeroSection";
+import FeaturedProjectsSection from "./featured-projects/FeaturedProjectsSection";
 import ToolsSection from "./tools/ToolsSection";
 
 export default function HomePage() {
@@ -8,6 +9,7 @@ export default function HomePage() {
       <hr className="border-2 border-base-300" />
       <ToolsSection />
       <hr className="border-2 border-base-300" />
+      <FeaturedProjectsSection />
     </div>
   )
 }
