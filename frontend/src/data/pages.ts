@@ -15,6 +15,10 @@ const PAGES: Page[] = [
   { name: "More", path: "/more", icon: Rocket },
 ] as const
 
+export type {
+  Page,
+}
+
 export {
-  PAGES
+  PAGES,
 }
