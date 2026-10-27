@@ -7,7 +7,7 @@ export default function Tag({
 }: Props) {
   return (
     <div className={cn(
-      "px-4 py-1 rounded-lg",
+      "px-2 py-1 rounded-lg",
       className
     )}>
       {children}
