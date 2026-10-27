@@ -52,25 +52,25 @@ export default function FeaturedProjectCard({
       <div className="h-full p-4 flex flex-col justify-between gap-4">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-1">
-            <Text as="h3" size="sm">{name}</Text>
+            <Text as="h3">{name}</Text>
             <Text size="sm">{description}</Text>
           </div>
           {!featured && (
             <>
               <Divider />
-              <div className="flex flex-col">
+              <div className="flex flex-col gap-1">
                 <Text size="sm" className="font-medium">
                   Built for:
                 </Text>
-                <Text size="sm" className="">
+                <Text size="sm">
                   {context}
                 </Text>
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col gap-1">
                 <Text size="sm" className="font-medium">
                   My role:
                 </Text>
-                <Text size="sm" className="">
+                <Text size="sm">
                   {role}
                 </Text>
               </div>
