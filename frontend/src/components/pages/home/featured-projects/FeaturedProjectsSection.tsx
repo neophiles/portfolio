@@ -1,5 +1,5 @@
 import Text from "../../../common/Text";
-import FeaturedProjectsContainer from "./FeaturedProjectsContainer";
+import ProjectsContainer from "../../projects/ProjectsContainer";
 
 export default function FeaturedProjectsSection() {
   return (
@@ -8,7 +8,7 @@ export default function FeaturedProjectsSection() {
         <Text as="h2" size="lg">
           Featured Projects
         </Text>
-        <FeaturedProjectsContainer />
+        <ProjectsContainer featured={true} />
       </div>
     </section>
   )

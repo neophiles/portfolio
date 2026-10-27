@@ -18,6 +18,7 @@ export default function Sidebar() {
     widthThreshold = 426
   ) => {
     navigate(path)
+    window.scrollTo({ top: 0, behavior: "smooth" })
     if (screenWidth <= widthThreshold) toggleOpen()
   }
 
@@ -30,19 +31,24 @@ export default function Sidebar() {
     )}>
       <div className="p-4 flex flex-col bg-inherit overflow-hidden">
         <nav className="flex flex-col gap-2 bg-inherit">
-          {PAGES.map(({ name, path, icon }, index) => (
-            <Button
-              key={index}
-              className={cn(
-                "p-1 flex items-center gap-4 rounded-lg",
-                location.pathname == path ? "brightness-90 bg-primary/10 text-primary" : "bg-inherit"
-              )}
-              onClick={() => handleNavigate(path)}
-            >
-              <Icon icon={icon} />
-              <Text size="sm" className="font-medium">{name}</Text>
-            </Button>
-          ))}
+          {PAGES.map(({ name, path, icon }, index) => {
+            const currentPath = location.pathname
+            const isActive = currentPath == path || (currentPath === "/" && path === "/home")
+
+            return (
+             <Button
+                key={index}
+                className={cn(
+                  "p-1 flex items-center gap-4 rounded-lg",
+                  isActive ? "brightness-90 bg-primary/10 text-primary" : "bg-inherit",
+                )}
+                onClick={() => handleNavigate(path)}
+              >
+                <Icon icon={icon} />
+                <Text size="sm" className="font-medium">{name}</Text>
+              </Button>
+           ) 
+          })}
         </nav>
       </div>
     </aside>
