@@ -10,7 +10,7 @@ export default function HobbiesSection() {
           Hobbies
         </Text>
         <Text size="sm">
-          I do these weird things on the side. I just enjoy doing them, that's all.
+          I do these weird things on the side.
         </Text>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-col gap-2">
