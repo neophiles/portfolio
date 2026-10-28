@@ -10,7 +10,7 @@ export default function MusicSection() {
           Favorite Albums
         </Text>
         <Text size="sm">
-          I explore all genres, but Indie is my home. I love ILLIT so much.
+          I explore all genres, but Indie is my home.
         </Text>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:flex lg:flex-wrap gap-2">
