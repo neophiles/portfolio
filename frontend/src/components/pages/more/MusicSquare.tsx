@@ -24,6 +24,7 @@ export default function MusicSquare({
       )}
       <img
         src={imgSrc}
+        alt={name}
         draggable={false}
         className="object-cover aspect-square w-full"
         loading="lazy"

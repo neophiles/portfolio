@@ -18,6 +18,7 @@ export default function HobbyCard({
       <div className="aspect-video lg:w-160 flex items-center justify-center bg-base-300 overflow-hidden select-none">
         <img
           src={imgSrc}
+          alt={name}
           loading="lazy"
           draggable={false}
           className="object-cover w-full group-hover:scale-110 transition-transform ease-in-out duration-200"
