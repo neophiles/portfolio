@@ -9,6 +9,7 @@ import Tag from "../../common/Tag";
 import Divider from "../../layout/Divider";
 import Icon from "../../common/Icon";
 import { Award } from "lucide-react";
+import useTheme from "../../../stores/theme";
 
 export default function FeaturedProjectCard({
   project,
@@ -29,6 +30,7 @@ export default function FeaturedProjectCard({
   } = project
 
   const thumbnail = imgSrc[0] || undefined
+  const { isDark } = useTheme()
 
   return (
     <Card className="group flex-1 lg:flex-none lg:w-80 flex flex-col bg-base-100/50 text-base-content shadow overflow-hidden">
@@ -80,15 +82,21 @@ export default function FeaturedProjectCard({
           )}
         </div>
         <div className="flex gap-2 justify-self-end">
-          {TOOLS.filter((tool) => tools.includes(tool.name)).map((tool, index) => (
-            <ToolIcon key={index} imgSrc={tool.imgSrc} />
+          {TOOLS.filter((tool) => tools.includes(tool.name)).map((tool) => (
+            <ToolIcon key={tool.name} tool={tool} />
           ))}
           <div className="flex-1" />
           <a
             href={githubHref}
             target="_blank"
           >
-            <ToolIcon imgSrc={[githubIconDark, githubIconLight]} />
+            <img
+              src={isDark ? githubIconLight : githubIconDark}
+              alt="GitHub"
+              draggable={false}
+              loading="lazy"
+              className="flex-none select-none size-5 md:size-6"
+            />
           </a>
         </div>
       </div>
