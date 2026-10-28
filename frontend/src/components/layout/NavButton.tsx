@@ -3,9 +3,8 @@ import Icon from "../common/Icon";
 import Text from "../common/Text";
 import { type Page } from "../../data/pages";
 import { cn } from "cn";
-import { useLocation, useNavigate } from "react-router";
-import useScreenWidth from "../../hooks/useScreenWidth";
-import useSidebar from "../../stores/sidebar";
+import { useLocation } from "react-router";
+import useAppNavigation from "../../hooks/useAppNavigation";
 
 type NavButtonPlacement = "side" | "bottom" 
 
@@ -22,22 +21,10 @@ export default function NavButton({
     icon,
   } = page
 
-  const navigate = useNavigate()
   const location = useLocation()
-  const { isOpen, toggleOpen } = useSidebar()
-  const { screenWidth } = useScreenWidth()
-
+  const { handleNavigate } = useAppNavigation()
   const currentPath = location.pathname
   const isActive = currentPath == path || (currentPath === "/" && path === "/home")
-
-  const handleNavigate = (
-    path: string,
-    widthThreshold = 426
-  ) => {
-    navigate(path)
-    window.scrollTo({ top: 0, behavior: "smooth" })
-    if (screenWidth <= widthThreshold && isOpen) toggleOpen()
-  }
 
   const placementClasses: Record<NavButtonPlacement, string[]> = {
     "side": ["bg-inherit text-base-content", "bg-primary/10 text-primary"],

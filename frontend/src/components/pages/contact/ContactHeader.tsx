@@ -13,7 +13,7 @@ export default function ContactHeader() {
           Open for software developer internship opportunities, development roles, collaborations, and freelance projects.
         </Text>
         <Text size="sm">
-          For inquiries or project estimates, reach out directly via email or LinkedIn.
+          For inquiries, you can reach out directly via email or LinkedIn.
         </Text>
       </div>
       <div className="flex items-center gap-4">

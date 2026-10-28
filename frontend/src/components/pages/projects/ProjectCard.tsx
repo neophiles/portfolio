@@ -37,6 +37,7 @@ export default function FeaturedProjectCard({
           <img
             src={imgSrc[0]}
             draggable={false}
+            loading="lazy"
             className="object-cover aspect-video select-none group-hover:scale-110 transition-transform duration-200"
           />
         )}
