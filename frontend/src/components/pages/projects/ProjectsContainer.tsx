@@ -11,7 +11,7 @@ export default function ProjectsContainer({
     : PROJECTS
   
   return (
-    <div className="grid md:grid-cols-2 lg:flex lg:flex-row md:flex-wrap gap-2">
+    <div className="grid md:grid-cols-2 lg:flex lg:flex-row md:flex-wrap gap-2 md:gap-3 lg:gap-4">
       {projectsDisplayed.map((project, index) => (
         <ProjectCard key={index} project={project} featured={featured} />
       ))}
