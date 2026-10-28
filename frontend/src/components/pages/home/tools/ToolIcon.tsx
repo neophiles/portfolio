@@ -1,6 +1,6 @@
-import type { Props } from '../../../../types/props'
-import useTheme from '../../../../stores/theme'
-import { cn } from 'cn'
+import type { Props } from "../../../../types/props"
+import useTheme from "../../../../stores/theme"
+import { cn } from "cn"
 
 interface ToolIconProps extends Props {
   imgSrc: string[];
@@ -16,6 +16,7 @@ export default function ToolIcon({
     <img
       src={isDark && imgSrc[1] ? imgSrc[1] : imgSrc[0]}
       draggable={false}
+      loading="lazy"
       className={cn(
         "flex-none select-none size-5 md:size-6",
         className
