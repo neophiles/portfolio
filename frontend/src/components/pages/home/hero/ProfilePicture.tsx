@@ -4,6 +4,7 @@ export default function ProfilePicture() {
   return (
     <img
       src={neilPfp}
+      alt="Marc Neil Tagle"
       draggable={false}
       loading="lazy"
       className="object-cover select-none aspect-square size-40 md:50 lg:size-60 p-1 ring-3 ring-secondary rounded-full"

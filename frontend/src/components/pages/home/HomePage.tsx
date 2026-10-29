@@ -2,15 +2,16 @@ import HeroSection from "./hero/HeroSection";
 import FeaturedProjectsSection from "./featured-projects/FeaturedProjectsSection";
 import ToolsSection from "./tools/ToolsSection";
 import Divider from "../../layout/Divider";
+import Page from "../../common/Page";
 
 export default function HomePage() {
   return (
-    <div className="max-w-5xl flex flex-col gap-8">
+    <Page>
       <HeroSection />
       <Divider />
       <ToolsSection />
       <Divider />
       <FeaturedProjectsSection />
-    </div>
+    </Page>
   )
 }

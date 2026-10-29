@@ -1,4 +1,4 @@
-import { type LucideIcon, Award, Certificate, Folder, Home, Phone, Rocket } from "lucide-react";
+import { type LucideIcon, Certificate, Folder, Home, Phone, User } from "lucide-react";
 
 interface Page {
   name: string;
@@ -8,11 +8,10 @@ interface Page {
 
 const PAGES: Page[] = [
   { name: "Home", path: "/home", icon: Home },
+  { name: "Credentials", path: "/credentials", icon: Certificate },
   { name: "Projects", path: "/projects", icon: Folder },
-  { name: "Certificates", path: "/certificates", icon: Certificate },
-  { name: "Awards", path: "/awards", icon: Award },
+  { name: "About", path: "/about", icon: User },
   { name: "Contact", path: "/contact", icon: Phone },
-  { name: "More", path: "/more", icon: Rocket },
 ] as const
 
 export type {
