@@ -10,7 +10,7 @@ const useAppNavigation = () => {
   const isPhoneView = screenWidth <= MAX_PHONE_SCREEN_WIDTH
 
   const handleNavigate = (path: string) => {
-    if (["/certificates", "/awards"].includes(path)) {
+    if (["/awards"].includes(path)) {
       alert("Coming Soon")
       return
     }
