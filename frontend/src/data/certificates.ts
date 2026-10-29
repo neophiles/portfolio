@@ -1,8 +1,8 @@
-import userInterfaceDesign from "../assets/certificates/UserInterfaceDesign-Coursera6VMKKXS5QVIL.jpg"
-import softwareEngineeringIntro from "../assets/certificates/SoftwareEngineeringIntro-CouseraO9N2BC63IR2T.jpg"
-import applicationDevelopment from "../assets/certificates/ApplicationDevelopment-CourseraJ4Q0WI8XSJ4X.jpg"
-import frontendDevelopmentIntro from "../assets/certificates/FrontendDevelopmentIntro-Coursera3DU5G2VTGIZ3.jpg"
-import javascriptProgramming from "../assets/certificates/JavaScriptProgramming-Coursera9SVIXOLCM2QX.jpg"
+import userInterfaceDesign from "../assets/certificates/UserInterfaceDesign-Coursera6VMKKXS5QVIL.png"
+import softwareEngineeringIntro from "../assets/certificates/SoftwareEngineeringIntro-CouseraO9N2BC63IR2T.png"
+import applicationDevelopment from "../assets/certificates/ApplicationDevelopment-CourseraJ4Q0WI8XSJ4X.png"
+import frontendDevelopmentIntro from "../assets/certificates/FrontendDevelopmentIntro-Coursera3DU5G2VTGIZ3.png"
+import javascriptProgramming from "../assets/certificates/JavaScriptProgramming-Coursera9SVIXOLCM2QX.png"
 
 interface Certificate {
   name: string;
