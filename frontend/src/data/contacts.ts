@@ -30,12 +30,12 @@ const CONTACTS: Contact[] = [
     href: "mailto:mnv.tagle@gmail.com",
     icon: [GmailIcon]
   },
-  {
-    name: "Facebook",
-    alt: "Facebook",
-    href: "https://www.facebook.com/mnv.tagle.06/",
-    icon: [facebookIcon]
-  },
+  // {
+  //   name: "Facebook",
+  //   alt: "Facebook",
+  //   href: "https://www.facebook.com/mnv.tagle.06/",
+  //   icon: [facebookIcon]
+  // },
 ] as const
 
 export type {
