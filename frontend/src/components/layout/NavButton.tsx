@@ -25,6 +25,7 @@ export default function NavButton({
   const { handleNavigate } = useAppNavigation()
   const currentPath = location.pathname
   const isActive = currentPath == path || (currentPath === "/" && path === "/home")
+  const isBottom = placement === "bottom" ? "size-8" : ""
 
   const placementClasses: Record<NavButtonPlacement, string[]> = {
     "side": ["bg-inherit text-base-content", "bg-primary/10 text-primary"],
@@ -40,7 +41,7 @@ export default function NavButton({
       )}
       onClick={() => handleNavigate(path)}
     >
-      <Icon icon={icon} />
+      <Icon icon={icon} className={isBottom} />
       {placement === "side" && (
         <Text size="sm" className="font-medium">{name}</Text>
       )}
