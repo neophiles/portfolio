@@ -1,8 +1,21 @@
-import type { Certificate } from "../../../data/certificates";
+import { CERTIFICATES, type Certificate } from "../../../data/certificates";
 import Card from "../../common/Card";
 import Text from "../../common/Text";
 
-export default function CertificateCard({
+export default function CourseCertificatesSection() {
+  return (
+    <div className="flex flex-col gap-4">
+      <Text as="h3" size="lg">Course Certificates</Text>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-wrap gap-2 md:gap-3 lg:gap-4">
+        {CERTIFICATES.map((certificate, index) => (
+          <CertificateCard key={index} certificate={certificate} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export function CertificateCard({
   certificate
 }: {
   certificate: Certificate
